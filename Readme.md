@@ -1,1 +1,1 @@
-![example event parameter](https://github.com/github/docs/actions/workflows/ci.yml/badge.svg?event=push)
+![example event parameter](https://github.com/VitailOG/docs/actions/workflows/ci.yml/badge.svg?event=push)
