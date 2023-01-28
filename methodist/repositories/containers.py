@@ -1,0 +1,2 @@
+class MethodistContainer:
+    pass
