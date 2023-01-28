@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure--o%dpcky9x(h&ai59uza$)q@z2_2%6wsn(hcxog2%1k0)yvd6c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: list[str] = []
 
 
 # Application definition
@@ -27,9 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "rest_framework",
-    "django_filters",
-    
+    'rest_framework',
+    'django_filters',
+
     'methodist.apps.MethodistConfig'
 ]
 
@@ -48,8 +48,7 @@ ROOT_URLCONF = 'gradebook.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
