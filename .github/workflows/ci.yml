@@ -13,10 +13,10 @@ jobs:
 
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:latest  # add versions
         ports:
           - 5432:5432
-        env:
+        env:  # change settings
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: vzakharkiv2018
           POSTGRES_DB: backend
