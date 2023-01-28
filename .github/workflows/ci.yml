@@ -11,6 +11,16 @@ jobs:
       matrix:
         python-version: ["3.10"]
 
+    services:
+      db:
+        image: postgres:14.0
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: vitalik
+          POSTGRES_PASSWORD: 1111
+          POSTGRES_DB: gradebook
+
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}

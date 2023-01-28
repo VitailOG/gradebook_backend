@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,9 +77,9 @@ WSGI_APPLICATION = 'gradebook.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "backend",
-        "USER": "postgres",
-        "PASSWORD": "vzakharkiv2018",
+        "NAME": os.getenv("POSTGRES_DB", "backend"),
+        "USER": os.getenv("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "vzakharkiv2018"),
         "HOST": "localhost",
         "PORT": 5432
     },
