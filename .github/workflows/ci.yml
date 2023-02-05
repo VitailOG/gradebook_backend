@@ -19,7 +19,7 @@ jobs:
         env:  # change settings
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: vzakharkiv2018
-          POSTGRES_DB: backend
+          POSTGRES_DB: gradebook_db
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
