@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_filters',
+    'behaviors.apps.BehaviorsConfig',
 
     'methodist.apps.MethodistConfig'
 ]
@@ -70,14 +71,13 @@ WSGI_APPLICATION = 'gradebook.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "backend"),
-        "USER": os.getenv("POSTGRES_USER", "postgres"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "vzakharkiv2018"),
+        "NAME": "gradebook_db",
+        "USER": "postgres",
+        "PASSWORD": "vzakharkiv2018",
         "HOST": "localhost",
         "PORT": 5432
     },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

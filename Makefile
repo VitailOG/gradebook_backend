@@ -5,3 +5,6 @@ run-dev:
 migrate:
 	python manage.py makemigrations
 	python manage.py migrate
+
+rm:
+	rm -rf .mypy_cache
