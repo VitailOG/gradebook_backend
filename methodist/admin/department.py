@@ -4,7 +4,7 @@ from methodist.models import Department
 
 
 @admin.register(Department)
-class DepartmentAdmin(admin.ModelAdmin):
+class DepartmentAdmin(admin.ModelAdmin[Department]):
     list_display = ("id", "name", "__str__")
     list_display_links = ("id", "name", "__str__")
 

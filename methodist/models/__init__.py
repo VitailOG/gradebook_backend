@@ -1,4 +1,4 @@
-from .department import *
+from .department import Department
 
 
 __all__ = [
